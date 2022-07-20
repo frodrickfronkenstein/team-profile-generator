@@ -8,6 +8,16 @@ test('get engineer gitHub username', () => {
 });
 
 //getGithub()
+test('getGithub', () => {
+    const engineer = new Engineer('Bill', '2', 'bill@gmail.com', 'billsgithubusername');
+
+    expect(engineer.getGithub()).toEqual(expect.stringContaining(engineer.github.toString()));
+})
 
 
 //getRole()// Overridden to return'Engineer'
+test('getRole()', () => {
+    const engineer = new Engineer('Bill', '2', 'bill@gmail.com', 'billsgithubusername');
+
+    expect(engineer.getRole()).toBe('Engineer');
+});
